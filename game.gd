@@ -8,16 +8,37 @@ var current_question_index = 0
 var score = 0
 
 var quiz_data = [
-	# --- COMPLETAR ---
+	# --- COMPLETAR (Verbos e Contexto) ---
 	{"question": "[Completar] Ele _____ atrás de mim ontem.", "options": ["corre", "correria", "correu"], "correct_answer": 2},
 	{"question": "[Completar] Nós _____ uma pizza no jantar de amanhã.", "options": ["comemos", "comeremos", "comíamos"], "correct_answer": 1},
 	{"question": "[Completar] Se eu tivesse dinheiro, eu _____ o mundo.", "options": ["viajo", "viajaria", "viajei"], "correct_answer": 1},
-	# --- PREFIXO/SUFIXO ---
-	{"question": "[Prefixo/Sufixo] Sufixo para base 'Feliz':", "options": ["-mente", "-ção", "-ismo"], "correct_answer": 0},
-	{"question": "[Prefixo/Sufixo] Prefixo para 'Fazer' (reverter):", "options": ["Re-", "Des-", "In-"], "correct_answer": 1}
-	# Você pode adicionar as outras aqui depois!
-]
+	{"question": "[Completar] Quando a professora chegar, nós _____ a apresentação.", "options": ["começamos", "começaremos", "começávamos"], "correct_answer": 1},
+	{"question": "[Completar] É muito importante que você _____ a verdade agora.", "options": ["diga", "diz", "dirá"], "correct_answer": 0},
+	{"question": "[Completar] Naquela época, eles não _____ o que fazer.", "options": ["sabem", "sabiam", "saberão"], "correct_answer": 1},
+	{"question": "[Completar] Embora _____ chovendo muito, o evento não foi cancelado.", "options": ["está", "estivesse", "esteja"], "correct_answer": 1},
+	{"question": "[Completar] Eu já _____ esse filme umas três vezes.", "options": ["vi", "verei", "via"], "correct_answer": 0},
+	{"question": "[Completar] Quando o alarme tocou de manhã, eu já _____ acordado.", "options": ["tinha", "tenho", "terei"], "correct_answer": 0},
+	{"question": "[Completar] Tomara que eles _____ a tempo para o show.", "options": ["chegam", "cheguem", "chegaram"], "correct_answer": 1},
 
+	# --- PREFIXO/SUFIXO (Formação de Palavras) ---
+	{"question": "[Prefixo/Sufixo] Sufixo para a base 'Feliz' (advérbio):", "options": ["-mente", "-ção", "-ismo"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para 'Fazer' (significando reverter):", "options": ["Re-", "Des-", "In-"], "correct_answer": 1},
+	{"question": "[Prefixo/Sufixo] Sufixo para transformar 'Leal' em um substantivo:", "options": ["-dade", "-mente", "-oso"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para 'Legal' (tornar negativo/oposto):", "options": ["I-", "Des-", "Anti-"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Sufixo para a base 'Jornal' (indicando profissão):", "options": ["-ista", "-eiro", "-ismo"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para indicar algo anterior à 'História':", "options": ["Pós-", "Pré-", "Sub-"], "correct_answer": 1},
+	{"question": "[Prefixo/Sufixo] Sufixo para indicar qualidade na base 'Belo':", "options": ["-eza", "-mente", "-oso"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para 'Vírus' (indicando combate/oposição):", "options": ["Anti-", "Pró-", "Super-"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Sufixo para transformar 'Lento' em advérbio de modo:", "options": ["-mente", "-idão", "-eza"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para 'Marino' (indicando que está abaixo):", "options": ["Sub-", "Sobre-", "Intra-"], "correct_answer": 0},
+
+	# --- ORTOGRAFIA (Os clássicos pegadinhas) ---
+	{"question": "[Ortografia] Qual é a grafia correta da palavra?", "options": ["Exceção", "Esceção", "Exseção"], "correct_answer": 0},
+	{"question": "[Ortografia] Eu fui _____ loja comprar roupas de inverno.", "options": ["a", "à", "há"], "correct_answer": 1},
+	{"question": "[Ortografia] Nós estamos estudando _____ muito tempo.", "options": ["a", "à", "há"], "correct_answer": 2},
+	{"question": "[Ortografia] Ele não veio ontem _____ estava muito doente.", "options": ["por que", "porque", "porquê"], "correct_answer": 1},
+	{"question": "[Ortografia] _____ você não me avisou sobre a mudança antes?", "options": ["Por que", "Porque", "Por quê"], "correct_answer": 0}
+]
 func _ready():
 	quiz_data.shuffle() 
 	load_question()
@@ -35,7 +56,7 @@ func load_question():
 	var current_q = quiz_data[current_question_index]
 	question_text.text = current_q["question"]
 	feedback_text.text = "Pontos: " + str(score)
-	feedback_text.modulate = Color.WHITE # Reseta a cor para branco
+	feedback_text.modulate = Color.YELLOW # Reseta a cor para branco
 
 	for i in range(current_q["options"].size()):
 		var btn = Button.new()

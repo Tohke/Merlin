@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.73, 0.73, 0.73, 1)
+color = Color(0.51000005, 0.78199995, 0.85, 1)
 
 [node name="QuestionText" type="Label" parent="." unique_id=1280700228]
 layout_mode = 1
@@ -43,10 +43,15 @@ grow_vertical = 2
 
 [node name="FeedbackText" type="Label" parent="." unique_id=2062558425]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.90400004
+anchor_right = 0.23300001
+anchor_bottom = 0.97400004
+offset_left = 21.896
+offset_top = 0.20794678
+offset_right = -24.416016
+offset_bottom = -0.15203857
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 32
