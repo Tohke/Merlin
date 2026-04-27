@@ -1,60 +1,45 @@
 extends Control
 
-# Conectando o código aos elementos da tela
 @onready var question_text = $QuestionText
 @onready var options_container = $OptionsContainer
 @onready var feedback_text = $FeedbackText
 
-# Variável para controlar em qual pergunta estamos
 var current_question_index = 0
+var score = 0
 
-# Nosso banco de dados "Vibe Coding" de perguntas
 var quiz_data = [
-	{
-		"question": "Ele _____ atrás de mim ontem.",
-		"options": ["corre", "correria", "correu"],
-		"correct_answer": 2 # Índice da resposta certa: 0=corre, 1=correria, 2=correu
-	},
-	{
-		"question": "Nós _____ uma pizza deliciosa no jantar.",
-		"options": ["comemos", "comerão", "comerei"],
-		"correct_answer": 0 
-	},
-	{
-		"question": "Se eu tivesse dinheiro, eu _____ o mundo.",
-		"options": ["viajo", "viajaria", "viajei"],
-		"correct_answer": 1
-	}
+	# --- COMPLETAR ---
+	{"question": "[Completar] Ele _____ atrás de mim ontem.", "options": ["corre", "correria", "correu"], "correct_answer": 2},
+	{"question": "[Completar] Nós _____ uma pizza no jantar de amanhã.", "options": ["comemos", "comeremos", "comíamos"], "correct_answer": 1},
+	{"question": "[Completar] Se eu tivesse dinheiro, eu _____ o mundo.", "options": ["viajo", "viajaria", "viajei"], "correct_answer": 1},
+	# --- PREFIXO/SUFIXO ---
+	{"question": "[Prefixo/Sufixo] Sufixo para base 'Feliz':", "options": ["-mente", "-ção", "-ismo"], "correct_answer": 0},
+	{"question": "[Prefixo/Sufixo] Prefixo para 'Fazer' (reverter):", "options": ["Re-", "Des-", "In-"], "correct_answer": 1}
+	# Você pode adicionar as outras aqui depois!
 ]
 
 func _ready():
-	# Isso roda assim que você dá Play no jogo
+	quiz_data.shuffle() 
 	load_question()
 
 func load_question():
-	# Verifica se já respondemos todas as perguntas
-	if current_question_index >= quiz_data.size():
-		question_text.text = "Fim de jogo! Você zerou o quiz."
-		options_container.hide() # Esconde os botões
-		feedback_text.text = ""
-		return
-
-	# Pega a pergunta atual do nosso banco de dados
-	var current_q = quiz_data[current_question_index]
-	
-	# Atualiza os textos na tela
-	question_text.text = current_q["question"]
-	feedback_text.text = ""
-
-	# Limpa os botões da pergunta anterior (se houver)
+	# Limpa a tela
 	for child in options_container.get_children():
 		child.queue_free()
 
-	# Cria os novos botões automaticamente com base nas opções
+	# Se chegou ao fim de todas as perguntas sem errar: VITÓRIA!
+	if current_question_index >= quiz_data.size():
+		show_end_screen("Você Venceu! Parabéns!")
+		return
+
+	var current_q = quiz_data[current_question_index]
+	question_text.text = current_q["question"]
+	feedback_text.text = "Pontos: " + str(score)
+	feedback_text.modulate = Color.WHITE # Reseta a cor para branco
+
 	for i in range(current_q["options"].size()):
 		var btn = Button.new()
 		btn.text = current_q["options"][i]
-		# Configura o botão para rodar uma função quando clicado
 		btn.pressed.connect(_on_option_selected.bind(i))
 		options_container.add_child(btn)
 
@@ -62,14 +47,35 @@ func _on_option_selected(selected_index):
 	var correct_index = quiz_data[current_question_index]["correct_answer"]
 
 	if selected_index == correct_index:
-		feedback_text.text = "Correto! Mandou muito."
-		feedback_text.modulate = Color.GREEN # Fica verde
+		score += 1 
+		feedback_text.text = "Correto!"
+		feedback_text.modulate = Color.GREEN
 		
-		current_question_index += 1 # Vai para a próxima pergunta
-		
-		# Espera 1 segundo para o jogador ler que acertou e carrega a próxima
-		await get_tree().create_timer(1.0).timeout
+		current_question_index += 1
+		await get_tree().create_timer(0.5).timeout
 		load_question()
 	else:
-		feedback_text.text = "Ops, quase! Tente outra."
-		feedback_text.modulate = Color.RED # Fica vermelho
+		# ERROU: Fim de jogo imediato!
+		feedback_text.text = "RESPOSTA ERRADA!"
+		feedback_text.modulate = Color.RED
+		
+		# Pequena pausa para o jogador sentir o drama do erro antes da tela final
+		await get_tree().create_timer(0.8).timeout
+		show_end_screen("FIM DE JOGO")
+
+# Função centralizada para mostrar o resultado final
+func show_end_screen(title_message):
+	# Limpa os botões de opções
+	for child in options_container.get_children():
+		child.queue_free()
+	
+	# Atualiza os textos da tela final
+	question_text.text = title_message
+	feedback_text.text = "Sua pontuação final: " + str(score)
+	feedback_text.modulate = Color.YELLOW # Destaque para o placar
+	
+	# Cria o botão de reiniciar
+	var restart_btn = Button.new()
+	restart_btn.text = "Tentar Novamente"
+	restart_btn.pressed.connect(func(): get_tree().reload_current_scene())
+	options_container.add_child(restart_btn)

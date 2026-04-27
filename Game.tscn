@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c3p5p0aaqsnv2"]
 
+[ext_resource type="Script" uid="uid://bgv0rcoav0wki" path="res://game.gd" id="1_wbfu4"]
+
 [node name="Game" type="Control" unique_id=2002747707]
 layout_mode = 3
 anchors_preset = 15
@@ -7,7 +9,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wbfu4")
 metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=193685775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.73, 0.73, 0.73, 1)
 
 [node name="QuestionText" type="Label" parent="." unique_id=1280700228]
 layout_mode = 1
@@ -15,7 +27,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "meu cu"
+theme_override_font_sizes/font_size = 30
 
 [node name="OptionsContainer" type="VBoxContainer" parent="." unique_id=623228934]
 layout_mode = 1
