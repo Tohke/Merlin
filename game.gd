@@ -3,7 +3,7 @@ extends Control
 @onready var question_text = $QuestionText
 @onready var options_container = $OptionsContainer
 @onready var feedback_text = $FeedbackText
-
+@onready var sfx_player = $ClickSound
 var current_question_index = 0
 var score = 0
 
@@ -65,6 +65,8 @@ func load_question():
 		options_container.add_child(btn)
 
 func _on_option_selected(selected_index):
+	sfx_player.play()
+	
 	var correct_index = quiz_data[current_question_index]["correct_answer"]
 
 	if selected_index == correct_index:
