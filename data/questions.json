@@ -1,0 +1,268 @@
+{
+  "categories": [
+	{
+	  "id": "dilemas_dia_a_dia",
+	  "name": "Dilemas do Dia a Dia",
+	  "questions": [
+		{
+		  "question": "Fui ao shopping com meus amigos, ______ esqueci minha carteira em casa.",
+		  "options": ["mas", "mais", "má"],
+		  "correct_answer": 0,
+		  "explanation": "'Mas' indica oposição (ideia de porém). Já o 'mais' indica quantidade ou soma!"
+		},
+		{
+		  "question": "Eu quero comer ______ um pedaço de bolo, por favor!",
+		  "options": ["mas", "mais", "más"],
+		  "correct_answer": 1,
+		  "explanation": "'Mais' com 'I' serve para indicar quantidade. É o oposto de menos."
+		},
+		{
+		  "question": "Hoje eu acordei me sentindo meio ______. Acho que o lanche ontem não caiu bem.",
+		  "options": ["mau", "mal", "máu"],
+		  "correct_answer": 1,
+		  "explanation": "'Mal' com L é o oposto de 'bem'. Pensou em 'estou bem', o contrário é 'estou mal'."
+		},
+		{
+		  "question": "O vilão do filme novo é um cara muito ______.",
+		  "options": ["mau", "mal", "mão"],
+		  "correct_answer": 0,
+		  "explanation": "'Mau' com U é o oposto de 'bom'. Se ele não é um cara 'bom', ele é um cara 'mau'."
+		},
+		{
+		  "question": "______ está o meu estojo de desenho que deixei aqui?",
+		  "options": ["Onde", "Aonde", "Daonde"],
+		  "correct_answer": 0,
+		  "explanation": "Usamos 'Onde' para lugares fixos ou permanentes (onde está, onde fica)."
+		},
+		{
+		  "question": "______ nós vamos comemorar o seu aniversário no sábado?",
+		  "options": ["Onde", "Aonde", "Para onde de"],
+		  "correct_answer": 1,
+		  "explanation": "Quem vai, vai 'A' algum lugar. Como a frase indica movimento/destino, usamos 'Aonde'!"
+		},
+		{
+		  "question": "Por favor, coloque ______ açúcar no meu suco.",
+		  "options": ["menos", "menas", "mêno"],
+		  "correct_answer": 0,
+		  "explanation": "A palavra 'menas' NÃO existe. Sempre usamos 'menos', mesmo para palavras femininas."
+		},
+		{
+		  "question": "A minha irmã ficou ______ cansada depois do treino de vôlei.",
+		  "options": ["meia", "meio", "metade"],
+		  "correct_answer": 1,
+		  "explanation": "Usamos 'meio' quando significa 'um pouco'. 'Meia' só se for a de vestir ou metade de algo!"
+		},
+		{
+		  "question": "Espero que o nosso time não sofra uma ______ dolorosa no campeonato.",
+		  "options": ["perda", "perca", "perder"],
+		  "correct_answer": 0,
+		  "explanation": "'Perda' é o nome da ação (substantivo). 'Perca' é do verbo perder (ex: não perca isso)."
+		},
+		{
+		  "question": "O controle do videogame está ______ a mesa da sala.",
+		  "options": ["sob", "sobre", "atrás de"],
+		  "correct_answer": 1,
+		  "explanation": "'Sobre' significa em cima de. 'Sob' significa embaixo de!"
+		}
+	  ]
+	},
+	{
+	  "id": "mensagens_internet",
+	  "name": "Mensagens e Internet",
+	  "questions": [
+		{
+		  "question": "Amanhã ______ vai se encontrar na pista de skate.",
+		  "options": ["agente", "a gente", "as gente"],
+		  "correct_answer": 1,
+		  "explanation": "'A gente' (separado) significa 'nós'. 'Agente' (junto) é o agente secreto ou da polícia!"
+		},
+		{
+		  "question": "Essa teoria que você inventou sobre a série não tem ______!",
+		  "options": ["nada haver", "nada a ver", "nada aver"],
+		  "correct_answer": 1,
+		  "explanation": "A expressão correta é 'nada a ver', referente ao verbo ver (não ter relação com algo)."
+		},
+		{
+		  "question": "Vou tirar uma nota excelente no trabalho, ______!",
+		  "options": ["comcerteza", "com certeza", "concerteza"],
+		  "correct_answer": 1,
+		  "explanation": "'Com certeza' escreve-se sempre separado! Não existe a palavra única 'concerteza'."
+		},
+		{
+		  "question": "______ você não respondeu minha chamada de vídeo no Discord ontem?",
+		  "options": ["Por que", "Porque", "Porquê"],
+		  "correct_answer": 0,
+		  "explanation": "Usamos 'Por que' separado e sem acento no início de perguntas."
+		},
+		{
+		  "question": "Não fui jogar hoje ______ fiquei estudando para a prova de Geografia.",
+		  "options": ["Por que", "Porque", "Por quê"],
+		  "correct_answer": 1,
+		  "explanation": "Usamos 'Porque' junto e sem acento quando estamos respondendo ou explicando algo."
+		},
+		{
+		  "question": "Você não vai para a festa de sábado? Mas ______?",
+		  "options": ["por que", "porque", "por quê"],
+		  "correct_answer": 2,
+		  "explanation": "Quando o 'por quê' fica isolado no final de frases, ele ganha um acento circunflexo!"
+		},
+		{
+		  "question": "Se eu ______ o professor online, aviso que nosso grupo já terminou.",
+		  "options": ["ver", "vir", "virei"],
+		  "correct_answer": 1,
+		  "explanation": "Para o futuro do verbo VER, o correto é 'se eu vir' (se eu vir ele). 'Se eu ver' está incorreto!"
+		},
+		{
+		  "question": "Esse controle novo é ______ eu jogar no computador.",
+		  "options": ["pra mim", "pra eu", "para mim fazer"],
+		  "correct_answer": 1,
+		  "explanation": "Quem faz a ação de jogar sou 'eu'. 'Mim' não faz ação (mim não joga, mim não lê)!"
+		},
+		{
+		  "question": "Eu estou muito ______ passar de fase logo nesse jogo.",
+		  "options": ["a fim de", "afim de", "afim"],
+		  "correct_answer": 0,
+		  "explanation": "A expressão de desejo/vontade é 'a fim de' (separado). 'Afim' (junto) significa semelhança."
+		},
+		{
+		  "question": "Melhor você salvar o arquivo agora, ______ vai perder todo o progresso.",
+		  "options": ["se não", "senão", "se nem"],
+		  "correct_answer": 1,
+		  "explanation": "'Senão' (junto) significa 'caso contrário'. 'Se não' (separado) indica uma condição negativa."
+		}
+	  ]
+	},
+	{
+	  "id": "tempo_e_verbos",
+	  "name": "Tempo e Verbos",
+	  "questions": [
+		{
+		  "question": "Já ______ dois anos que eu mudei de escola e conheci vocês.",
+		  "options": ["fazem", "faz", "fará"],
+		  "correct_answer": 1,
+		  "explanation": "O verbo fazer, quando indica tempo decorrido no passado, fica sempre no singular: 'faz dois anos'."
+		},
+		{
+		  "question": "Ontem nós ______ assistir ao novo filme no cinema da cidade.",
+		  "options": ["fomos", "fumos", "fomos fazer"],
+		  "correct_answer": 0,
+		  "explanation": "'Fumos' não existe como verbo! O correto para a primeira pessoa do plural (nós) é 'fomos'."
+		},
+		{
+		  "question": "______ muitos comentários legais no vídeo que eu postei no TikTok.",
+		  "options": ["Houveram", "Houve", "Houveram de"],
+		  "correct_answer": 1,
+		  "explanation": "O verbo haver no sentido de existir fica sempre no singular: 'Houve muitos comentários'."
+		},
+		{
+		  "question": "Se o ônibus não tivesse atrasado, eu teria ______ mais cedo.",
+		  "options": ["chegado", "chego", "cheguado"],
+		  "correct_answer": 0,
+		  "explanation": "O particípio do verbo chegar é 'chegado'. A expressão 'tinha chego' não existe na gramática."
+		},
+		{
+		  "question": "Ele sempre ______ o fone de ouvido reserva para me emprestar.",
+		  "options": ["traz", "trás", "atrás"],
+		  "correct_answer": 0,
+		  "explanation": "'Traz' com Z vem do verbo trazer. 'Trás' com S e acento indica direção/lugar (a parte de trás)."
+		},
+		{
+		  "question": "Esse é um segredo que deve ficar apenas ______.",
+		  "options": ["entre eu e você", "entre mim e você", "entre mim e tu"],
+		  "correct_answer": 1,
+		  "explanation": "Depois de preposições como 'entre', devemos usar pronomes oblíquos: 'entre mim e você'."
+		},
+		{
+		  "question": "No sinaleiro passado, nós ______ de ônibus porque chovia muito.",
+		  "options": ["vimos", "viemos", "vemos"],
+		  "correct_answer": 1,
+		  "explanation": "'Viemos' é o passado do verbo vir. 'Vimos' é do verbo ver (nós vimos a TV) ou presente de vir."
+		},
+		{
+		  "question": "Os meus amigos de clã ______ muitos itens raros guardados.",
+		  "options": ["tem", "têm", "tão"],
+		  "correct_answer": 1,
+		  "explanation": "Usamos o 'têm' com acento circunflexo para indicar o plural (eles têm)."
+		},
+		{
+		  "question": "Eu ______ jogar aquele jogo de perguntas e respostas com você.",
+		  "options": ["quis", "quiz", "quize"],
+		  "correct_answer": 0,
+		  "explanation": "'Quis' (com S) vem do verbo querer. 'Quiz' (com Z) é o nome deste tipo de jogo!"
+		},
+		{
+		  "question": "Ontem ele não ______ entrar na partida de noite porque ficou sem internet.",
+		  "options": ["pode", "pôde", "podia"],
+		  "correct_answer": 1,
+		  "explanation": "'Pôde' com acento é o passado do verbo poder. 'Pode' sem acento é o presente."
+		}
+	  ]
+	},
+	{
+	  "id": "desafios_escrita",
+	  "name": "Desafios de Escrita",
+	  "questions": [
+		{
+		  "question": "Espero que meus tios ______ bem na estrada amanhã.",
+		  "options": ["viajem", "viagem", "viajão"],
+		  "correct_answer": 0,
+		  "explanation": "'Viajem' com J é o verbo (que eles viajem). 'Viagem' com G é o substantivo (a viagem foi boa)."
+		},
+		{
+		  "question": "A nossa ______ de férias para a praia foi simplesmente incrível.",
+		  "options": ["viajem", "viagem", "viajada"],
+		  "correct_answer": 1,
+		  "explanation": "Como é um substantivo (a ação), escreve-se com G: 'A viagem'."
+		},
+		{
+		  "question": "Estou muito ______ para ver o lançamento do novo jogo amanhã!",
+		  "options": ["ansiado", "ansioso", "ancioso"],
+		  "correct_answer": 1,
+		  "explanation": "'Ansioso' vem de ansiedade e escreve-se com S. Não existe ancioso com C!"
+		},
+		{
+		  "question": "O susto com o monstro fez o personagem ______ de medo.",
+		  "options": ["paralisar", "paralizar", "paralizado"],
+		  "correct_answer": 0,
+		  "explanation": "'Paralisar' vem de paralisia, por isso mantém o S. Não use Z aqui!"
+		},
+		{
+		  "question": "Cuidado para não ______ nas configurações e estragar o áudio do jogo.",
+		  "options": ["mecher", "mexer", "meche"],
+		  "correct_answer": 1,
+		  "explanation": "A palavra 'mexer' e seus derivados são sempre escritos com a letra X."
+		},
+		{
+		  "question": "Está tudo muito escuro, quase não consigo ______ a tela.",
+		  "options": ["enxergar", "enchergar", "enxergada"],
+		  "correct_answer": 0,
+		  "explanation": "'Enxergar' escreve-se com X após a sílaba inicial 'en-'."
+		},
+		{
+		  "question": "Tive que fazer uma ______ enorme na internet para o trabalho da escola.",
+		  "options": ["pesquiza", "pesquisa", "pesquisada"],
+		  "correct_answer": 1,
+		  "explanation": "'Pesquisa' escreve-se com S. O som parece Z, mas a grafia correta usa S."
+		},
+		{
+		  "question": "Gosto muito do ______ de jogar do seu irmão, ele joga em equipe.",
+		  "options": ["geito", "jeito", "jeito de"],
+		  "correct_answer": 1,
+		  "explanation": "A palavra 'jeito' escreve-se obrigatoriamente com J. Não confunda com G!"
+		},
+		{
+		  "question": "Eu vou ______ o lençol na cama nova antes de deitar.",
+		  "options": ["extender", "estender", "estendida"],
+		  "correct_answer": 1,
+		  "explanation": "'Estender' começa com ES. Embora pareça com 'extensão', o verbo usa S."
+		},
+		{
+		  "question": "Todo mundo no grupo foi desbanido, sem ______ nenhuma.",
+		  "options": ["exceção", "excessão", "esceção"],
+		  "correct_answer": 0,
+		  "explanation": "A grafia correta é 'exceção' (com XC no começo e Ç no final)."
+		}
+	  ]
+	}
+  ]
+}
